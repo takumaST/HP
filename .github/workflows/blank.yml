@@ -31,5 +31,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to your hosting service (e.g., お名前ドットコム)
-        run: |
-          echo "ここにお名前ドットコムへのデプロイコマンドを追加"
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:                                        
+          server: ${{ secrets.FTP_SERVER }}     
+          username: ${{ secrets.FTP_USERNAME }} 
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: './out'  # ビルドされた`out`フォルダ
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
