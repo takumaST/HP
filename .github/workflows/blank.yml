@@ -37,5 +37,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }} 
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          local-dir: './out'  # ビルドされた`out`フォルダ
+          local-dir: './out/'  # ビルドされた`out`フォルダ
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
