@@ -161,7 +161,7 @@ const Home = async() => {
               {/*ロゴ*/}
               <div className="h-48 flex justify-center items-center">
                 <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                  <Image className="" src="/images/businessIcons/youtubeIcon.svg" alt="x" width={100} height={100}/>
+                  <Image className="" src="/images/businessIcons/YoutubeIcon.svg" alt="" width={100} height={100}/>
                 </div>
               </div>
               {/*サービス名*/}
@@ -180,7 +180,7 @@ const Home = async() => {
               {/*ロゴ*/}
               <div className="h-48 flex justify-center items-center">
                 <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                  <Image className="" src="/images/businessIcons/MovieIcon.svg" alt="x" width={100} height={100}/>
+                  <Image className="" src="/images/businessIcons/MovieIcon.svg" alt="" width={100} height={100}/>
                 </div>  
               </div>
               {/*サービス名*/}
@@ -201,7 +201,7 @@ const Home = async() => {
               {/*ロゴ*/}
               <div className="h-48 flex justify-center items-center">
                 <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                  <Image className="" src="/images/businessIcons/MarketingIcon.svg" alt="x" width={120} height={120}/>
+                  <Image className="" src="/images/businessIcons/MarketingIcon.svg" alt="" width={120} height={120}/>
                 </div>  
               </div>
               {/*サービス名*/}
@@ -221,7 +221,7 @@ const Home = async() => {
               {/*ロゴ*/}
               <div className="h-48 flex justify-center items-center">
                 <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                  <Image className="" src="/images/businessIcons/MedicalIcon.svg" alt="x" width={100} height={100}/>
+                  <Image className="" src="/images/businessIcons/MedicalIcon.svg" alt="" width={100} height={100}/>
                 </div>  
               </div>
               {/*サービス名*/}
