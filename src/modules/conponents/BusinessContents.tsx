@@ -2,6 +2,9 @@
 import { iBusinessContent } from "@/app/business/Business"
 import Image from "next/image"
 import { useInView } from "react-intersection-observer"
+import { Hina_Mincho } from "next/font/google";
+
+export const micho = Hina_Mincho({ subsets: ["latin"], weight: ["400"] });
 
 const BusinessContents = ( { content, side }: {content:iBusinessContent, side: "left" | "right"}) => {
     const {title, body, image} = content
@@ -17,8 +20,8 @@ const BusinessContents = ( { content, side }: {content:iBusinessContent, side: "
         <div className={`lg:w-2/3 mx-auto opacity-0 ${inView && "opacity-100 animate-fade-left animate-once animate-duration-4000 animate-ease-out"}`}>
             <div className="w-11/12 mx-auto"> 
                 {image && <div className="h-16 hidden lg:block"></div>}
-                <h3 className="text-2xl font-bold py-2">{title}</h3>
-                <div className="text-lg animate-fade animate-delay-1000">{body}</div>
+                <h3 className={`text-4xl ${micho.className} font-extrabold text-yellow-800 py-2`}>{title}</h3>
+                <div className="text-lg p-4 animate-fade animate-delay-1000">{body}</div>
             </div>
         </div>
         {image &&

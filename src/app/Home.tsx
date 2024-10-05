@@ -39,8 +39,9 @@ const Home = async() => {
       src="/images/47170035_s.webp" alt="Exsend Logo" width={180} height={37} priority
       /> */}
       <Image
-      className="absolute z-[-1] inset-0 h-full w-full object-cover hidden translate-x-24 -translate-y-4 drop-shadow-[0_0_0.2rem_#000000] lg:block dark:hidden"
+      className="absolute z-[-1] inset-0 h-full w-full object-cover hidden translate-x-20 -translate-y-4 drop-shadow-[0_0_0.2rem_#000000] lg:block dark:hidden"
       src="/images/30248181_s.webp" alt="Exsend Logo" width={180} height={37} priority
+      // /image_fx-office-1.jpg
       />
       <div className="absolute z-[-3] inset-0 h-full w-full -translate-x-40 bg-sky-900 translate-y-8"></div>
       <div className="relative z-[-1] min-h-96 flex place-items-center">
@@ -59,8 +60,11 @@ const Home = async() => {
     {/**
      * お知らせ
      */}
-    <div className="w-2/3">
-      <div className="text-2xl font-bold m-4">お知らせ</div>
+    <div className="w-2/3 my-4">
+      <div className="relative">
+        <div className="text-6xl font-extrabold opacity-30 italic absolute">News</div>
+        <div className="text-3xl font-bold m-4 pt-12">お知らせ</div>
+      </div>
       <div>
       {parsedContents.map((content:Content, idx:number) => {
         const date = tokyoDate(content.revisedAt);
@@ -69,12 +73,12 @@ const Home = async() => {
         <>
         {idx < 3 ? (
           <div className="min-h-16" key={content.id}>
-              <div className="w-full border-b border-zinc-500">
-                  <div className="flex dark:font-normal">
-                      <p className="px-6">{date}</p>
-                      <a className="font-semibold" href={`/news/${content.id}`}><div>{content.title}</div></a>
-                  </div>
+            <div className="w-full border-b border-zinc-500 hover:text-sky-800">
+              <div className="h-12 flex items-center dark:font-normal">
+                <p className="px-6 font-bold text-sky-900">{date}</p>
+                <a className="font-semibold" href={`/news/${content.id}`}><div>{content.title}</div></a>
               </div>
+            </div>
           </div>
           ) : null
         }
@@ -88,9 +92,12 @@ const Home = async() => {
      * company
      */}
     <div className="w-2/3 my-4">
-      <div className="text-2xl font-bold m-4">会社概要</div>
+      <div className="relative">
+        <div className="text-6xl font-extrabold opacity-30 italic absolute">About</div>
+        <div className="text-3xl font-bold m-4 pt-12">会社概要</div>
+      </div>
       <div className="text-6xl font-extrabold">
-        <div className="m-8">世の中に価値のあるコンテンツを広め、文化を創る。</div>
+        <div className="m-8 italic">世の中に価値のあるコンテンツを広め、文化を創る。</div>
       </div>
     </div>
 
@@ -98,29 +105,44 @@ const Home = async() => {
      * case
      * 差し色追加
      */}
-    <div className="w-full my-4">
+    <div className="w-2/3 my-4">
       {/* <div className="absolute translate-x-1/3 z-[-1] h-full w-full bg-sky-700"></div> */}
-      <div className="w-2/3 mx-auto">
-        <div className="text-2xl font-bold m-4">導入事例</div>
+      <div className="w-full mx-auto">
+        <div className="relative">
+          <div className="text-6xl font-extrabold opacity-30 italic absolute">Case</div>
+          <div className="text-3xl font-bold m-4 pt-12">導入事例</div>
+        </div>
       </div>
       
-      <div className="w-screen h-96 z-[-1] flex bg-sky-900 absolute translate-x-[-16]">
+      <div className="w-screen h-96 z-[-1] flex bg-sky-900 -translate-x-96">
         <div className="w-4/5 mx-auto flex">
           <div className="m-8 w-1/5 bg-white flex justify-center items-center">
             <div className="w-5/6 object-cover">
-              <Image src="/footer_logo.png" alt="" width={280} height={180} />
+              <Image src="/images/logo/footer_logo.png" alt="" width={280} height={180} />
             </div>
           </div>
 
           <div className="m-8 w-1/5 bg-white flex justify-center items-center">
             <div className="w-5/6 object-cover">
-              <Image src="/LIART_logo.png" alt="" width={280} height={180} />
+              <Image src="/images/logo/LIART_logo.png" alt="" width={280} height={180} />
+            </div>
+          </div>
+
+          <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+            <div className="w-5/6 object-cover">
+              <Image src="/images/logo/Brave_logo.png" alt="" width={280} height={180} />
+            </div>
+          </div>
+
+          <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+            <div className="w-5/6 object-cover">
+              <Image src="/images/logo/jibanda-01.png" alt="" width={280} height={180} />
             </div>
           </div>
         </div>
         
       </div>
-      <div className="h-96"></div>
+      {/* <div className="h-96"></div> */}
         
     </div>
 
@@ -128,7 +150,10 @@ const Home = async() => {
      * service
      */}
     <div className="w-2/3 my-4">
-      <div className="text-2xl font-bold m-4">サービス</div>
+      <div className="relative">
+        <div className="text-6xl font-extrabold opacity-30 italic absolute">Service</div>
+        <div className="text-3xl font-bold m-4 pt-12">サービス</div>
+      </div>
       <div className="w-full">
         <div className="flex">
           <div className="w-1/2 text-center bg-white m-4 hover:drop-shadow-lg">

@@ -2,7 +2,7 @@ import BusinessContents from "@/modules/conponents/BusinessContents";
 import PageTitle from "@/modules/conponents/PageTitle";
 
 export interface iBusinessContents {
-    "YouTube運用/集客支援": iBusinessContent,
+    "With Tube": iBusinessContent,
     "動画制作/撮影": iBusinessContent,
     "SNS運用代行": iBusinessContent,
     "SNS広告運用/制作": iBusinessContent,
@@ -18,8 +18,8 @@ export interface iBusinessContent {
 }
 
 const BUSINESS_CONTENTS: iBusinessContents = {
-    "YouTube運用/集客支援":{
-        title: "YouTube運用/集客支援",
+    "With Tube":{
+        title: "With Tube",
         body: "合同会社エクセンドでは、お客様のお悩み・目的・状態に合わせて、YouTubeマーケットの事例を基に、適切なYouTube運用や集客のご提案・ご支援を行っております。",
         image: "/images/26847482_s.webp"
     },
@@ -60,7 +60,7 @@ const Business = () => {
     <>
         <div className="mx-auto text-center lg:w-4/5">
             <PageTitle title="事業内容　-Business-" />
-            <BusinessContents side="left" content={BUSINESS_CONTENTS["YouTube運用/集客支援"]}/>
+            <BusinessContents side="left" content={BUSINESS_CONTENTS["With Tube"]}/>
             <BusinessContents side="right" content={BUSINESS_CONTENTS["動画制作/撮影"]}/>
             <BusinessContents side="left" content={BUSINESS_CONTENTS["SNS運用代行"]}/>
             <BusinessContents side="right" content={BUSINESS_CONTENTS["SNS広告運用/制作"]}/>
