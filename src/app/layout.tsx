@@ -5,7 +5,7 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 // export const inter = Inter({ subsets: ["latin"] });
-export const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400"] });
+const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "合同会社エクセンド",
