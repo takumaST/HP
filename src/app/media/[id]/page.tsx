@@ -21,13 +21,14 @@ export default async function Page ({ params }: Params) {
     return (
     <>
     <Header title="Media" />
-    <div className="min-h-screen max-w-6xl mx-auto">
+    <div className="min-h-screen px-12 max-w-7xl mx-auto bg-gray-200">
         <div className="flex flex-row-reverse">
-            <div>
-            <div className="text-sm">掲載日　{tokyoDate(createdAt)}</div>
-            <div className="text-sm">更新日　{tokyoDate(revisedAt)}</div>
+            <div className="p-2">
+                <div className="text-sm">掲載日　{tokyoDate(createdAt)}</div>
+                <div className="text-sm">更新日　{tokyoDate(revisedAt)}</div>
             </div>
         </div>
+        <div className="m-12 text-2xl lg:text-4xl font-bold">{title}</div>
         <div dangerouslySetInnerHTML={{__html:parsedHTML}}/>
     </div>
     </>
