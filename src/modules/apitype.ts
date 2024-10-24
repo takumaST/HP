@@ -4,6 +4,13 @@ export type blogResponse = {
     publishedAt: string;
     revisedAt: string;
     title: string;
+    eyecatch: {
+        url: string;
+        height: number;
+        width: number;
+    };
+    introduction: string;
+    toc: boolean;
     content: string;
 }
 

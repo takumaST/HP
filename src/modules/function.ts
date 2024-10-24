@@ -50,6 +50,25 @@ export const parseHTML = (html: string): string => {
     return children ?? "";
 };
 
+export const extractTOC = (html: string) => {
+    const $ = cheerio.load(html);
+    const headings = $("h1").toArray();
+
+    const toc = headings.map((heading:cheerio.Element) => {
+        const text = $(heading).text();
+        if ('children' in heading){
+            return ({
+                text: text,
+                id: heading.attribs.id,
+                name: heading.name,
+            })
+        }
+        
+    })
+
+    return toc
+}
+
 export const tokyoDate = (date: string): string => {
     const dateObj = new Date(date);
     return dateObj.toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo' });

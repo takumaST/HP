@@ -1,4 +1,4 @@
-import { parseHTML, tokyoDate } from "@/modules/function";
+import { extractTOC, parseHTML, tokyoDate } from "@/modules/function";
 import { client } from "../../../../libs/client";
 import { blogResponse } from "@/modules/apitype";
 import Header from "@/modules/conponents/Header";
@@ -15,8 +15,11 @@ export default async function Page ({ params }: Params) {
         contentId: params.id,
     })
 
-    const { id, createdAt, publishedAt, revisedAt, title, content } = data
-    const parsedHTML = parseHTML(content)
+    const { id, createdAt, publishedAt, revisedAt, title, introduction, toc, content } = data;
+
+    const parsedIntro = parseHTML(introduction)
+    const topicOfContents = extractTOC(content)
+    const parsedContent = parseHTML(content)
 
     return (
     <>
@@ -29,7 +32,19 @@ export default async function Page ({ params }: Params) {
             </div>
         </div>
         <div className="m-12 text-2xl lg:text-4xl font-bold">{title}</div>
-        <div dangerouslySetInnerHTML={{__html:parsedHTML}}/>
+
+        {/* 導入文 */}
+        <div className="py-4" dangerouslySetInnerHTML={{__html:parsedIntro}}/>
+
+        {/* 目次 */}
+        {toc && (
+            <>
+            <div className="py-4 text-2xl font-bold">目次</div>
+            {topicOfContents.map(content => <div key={content?.id} className="p-2">{content?.text}</div>)}
+            </>
+        )}
+        
+        <div dangerouslySetInnerHTML={{__html:parsedContent}}/>
     </div>
     </>
     )
