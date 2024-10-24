@@ -31,7 +31,7 @@ const MediaContent: React.FC<blogContent> = ({
         <div className="min-h-80 lg:min-h-96 m-4 rounded-3xl hover:border-4 border-zinc-700 bg-zinc-400 dark:bg-zinc-900 dark:border-zinc-500">
             <div className="h-full">
                 <a className="text-xl" href={`./${id}`}>
-                    <div className="relative h-5/6 w-full"><Image src={eyecatch.url} alt="back" className="contain rounded-t-3xl" fill={true} /></div>
+                    <div className="relative h-5/6 w-full"><Image src={eyecatch.url} alt="back" className="object-cover rounded-t-3xl" fill={true} /></div>
                     <p className="text-sm text-cyan-700 dark:text-yellow-400 px-4">{tokyoDate(createdAt)}</p>
                     <div className="px-4">
                         {title}
