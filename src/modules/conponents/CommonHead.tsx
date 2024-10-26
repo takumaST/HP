@@ -1,22 +1,19 @@
 import Head from "next/head"
 
 interface commonHeadProps {
-    title: string;
-    description: string;
+  title: string
+  description: string
 }
 
-const CommonHead:React.FC<commonHeadProps> = ({
-    title,
-    description,
-}) => {
-    return (
+const CommonHead: React.FC<commonHeadProps> = ({ title, description }) => {
+  return (
     <>
-    <Head>
+      <Head>
         <meta property="title">{title}</meta>
         <meta property="description">{description}</meta>
-    </Head>
+      </Head>
     </>
-    )
+  )
 }
 
 export default CommonHead

@@ -3,13 +3,13 @@ import Header from "@/modules/conponents/Header"
 import PrivacyPolicy from "./PrivacyPolicy"
 
 const PrivacyPolicyPage = () => {
-    return (
+  return (
     <>
-        <Header />
-        <PrivacyPolicy />
-        <Footer/>
+      <Header />
+      <PrivacyPolicy />
+      <Footer />
     </>
-    )
+  )
 }
 
 export default PrivacyPolicyPage

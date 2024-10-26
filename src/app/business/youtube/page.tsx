@@ -3,13 +3,13 @@ import Header from "@/modules/conponents/Header"
 import YoutubeBusiness from "./Youtube"
 
 const PrivacyPolicyPage = () => {
-    return (
+  return (
     <>
-        <Header />
-        <YoutubeBusiness />
-        <Footer/>
+      <Header />
+      <YoutubeBusiness />
+      <Footer />
     </>
-    )
+  )
 }
 
 export default PrivacyPolicyPage
