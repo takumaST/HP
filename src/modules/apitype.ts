@@ -4,7 +4,7 @@ export type blogResponse = {
   publishedAt: string
   revisedAt: string
   title: string
-  eyecatch: {
+  eyecatch?: {
     url: string
     height: number
     width: number

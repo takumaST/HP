@@ -36,7 +36,7 @@ const MediaChildPage = async ({ params }: Params) => {
         {/* 画像 */}
         <div className="w-full h-96">
           <div className="relative size-full">
-            <Image src={eyecatch.url} alt="back" className="object-cover rounded-t-3xl" fill={true} />
+            <Image src={eyecatch?.url ?? ""} alt="back" className="object-cover rounded-t-3xl" fill={true} />
           </div>
         </div>
         {/* タイトル */}
