@@ -21,7 +21,6 @@ const MediaChildPage = async ({ params }: Params) => {
   const parsedIntro = parseHTML(introduction)
   const topicOfContents = extractTOC(content)
   const parsedContent = parseHTML(content)
-  console.log(eyecatch.url)
 
   return (
     <>

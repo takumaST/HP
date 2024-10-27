@@ -285,7 +285,7 @@ const Home = async () => {
       </div>
     </div> */}
 
-        <div className="m-8 mb-32 grid lg:text-center lg:mb-0 lg:w-full lg:max-w-6xl lg:grid-cols-4 lg:text-left">
+        <div className="m-8 mb-32 grid lg:text-center lg:mb-0 lg:w-full lg:max-w-6xl lg:grid-cols-4">
           <a
             href="./about"
             className="group rounded-lg border border-transparent mx-1 px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
