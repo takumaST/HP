@@ -26,7 +26,8 @@ const Header: React.FC<iHeaderProps> = ({ title }) => {
               </a>
             </div>
           </div>
-          <div className="hidden lg:vissible lg:flex">
+
+          <div className="hidden lg:visible lg:flex">
             <div
               className={`w-24 ${title === "About Us" ? "underline underline-offset-8 decoration-2 decoration-sky-400" : ""}`}
             >

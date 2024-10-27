@@ -62,7 +62,7 @@ const Media = async () => {
         <PageTitle title="コラム　-Media-" />
         <div className="h-full lg:p-12 grid lg:grid-cols-2">
           {parsedContents.map((content: blogContent) => (
-            <MediaContent key={content.id} {...content} />
+            <MediaContent key={`media-${content.id}`} {...content} />
           ))}
         </div>
       </div>

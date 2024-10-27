@@ -1,4 +1,4 @@
-import cheerio from "cheerio"
+import * as cheerio from "cheerio"
 
 export const parseHTML = (html: string): string => {
   if (!html) return ""
@@ -7,17 +7,17 @@ export const parseHTML = (html: string): string => {
 
   $("h1").each((_, element) => {
     $(element).html()
-    $(element).addClass("text-4xl mt-12")
+    $(element).addClass("text-4xl mt-12 mb-4")
   })
 
   $("h2").each((_, element) => {
     $(element).html()
-    $(element).addClass("text-.xl mt-10")
+    $(element).addClass("text-.xl mt-10 mb-4")
   })
 
   $("h3").each((_, element) => {
     $(element).html()
-    $(element).addClass("text-2xl mt-8")
+    $(element).addClass("text-2xl mt-8 mb-2")
   })
 
   $("h4").each((_, element) => {

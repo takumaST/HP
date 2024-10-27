@@ -10,7 +10,7 @@ interface Params {
   }
 }
 
-export default async function Page({ params }: Params) {
+export default async function NewsChildPage({ params }: Params) {
   const data = await client.get<newsResponse>({
     endpoint: "news",
     contentId: params.id,

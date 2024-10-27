@@ -108,7 +108,7 @@ const About = () => {
                 YouTubeやSNSに特化した運用や動画制作で、お客様の売上アップや認知拡大、業務コストカットによる負担削減に貢献します。
               </div>
               <div className="flex">
-                <div className="rounded-lg bg-black h-10 w-10 flex justify-center items-center m-1">
+                <div className="rounded-lg bg-black size-10 flex justify-center items-center m-1">
                   <a className="" href="https://x.com/takumarke" target="_blank">
                     <Image className="" src="/publicLogos/x_logo.svg" alt="x" width={25} height={25} />
                   </a>
