@@ -51,8 +51,8 @@ const MediaChildPage = async ({ params }: Params) => {
           <>
             <div className="py-6 pl-16 text-2xl font-bold border-b border-zinc-400">目次</div>
             <div className="my-2 w-4/5 lg:w-5/6 mx-auto">
-            {topicOfContents.map((content) => (
-              <div key={content?.id ?? ""} className="p-2 text-lg">
+            {topicOfContents.map((content, index) => (
+              <div key={`${index}${content?.id} ?? ""`} className="p-2 text-lg">
                 {content?.text}
               </div>
             ))}
