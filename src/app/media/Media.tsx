@@ -28,14 +28,16 @@ const MediaContent: React.FC<blogContent> = ({
   return (
     <>
       {/* // 次のdivの枠に靄をかけて */}
-      <div className="min-h-80 lg:min-h-96 m-4 rounded-3xl hover:border-4 border-zinc-700 bg-zinc-400 dark:bg-zinc-900 dark:border-zinc-500">
+      <div className="m-4 min-h-80 rounded-xl border-zinc-700 hover:border-2 dark:border-zinc-500 dark:bg-zinc-900 lg:min-h-96">
         <div className="h-full">
           <a className="text-xl" href={`./${id}`}>
             <div className="relative h-5/6 w-full">
-              <Image src={eyecatch.url} alt="back" className="object-cover rounded-t-3xl" fill={true} />
+              <Image src={eyecatch.url} alt="back" className="rounded-t-xl object-cover" fill={true} />
             </div>
-            <p className="text-sm text-cyan-700 dark:text-yellow-400 px-4">{tokyoDate(createdAt)}</p>
-            <div className="px-4">{title}</div>
+            <div className="rounded-b-xl border-x border-b border-transparent">
+              <p className="px-4 pt-1 text-sm text-cyan-700 dark:text-yellow-400">{tokyoDate(createdAt)}</p>
+              <div className="px-4 py-1">{title}</div>
+            </div>
           </a>
         </div>
       </div>
@@ -58,9 +60,10 @@ const Media = async () => {
 
   return (
     <>
-      <div className="min-h-screen mx-auto w-5/6 lg:w-2/3">
+      <div className="mx-auto min-h-screen w-5/6 lg:w-2/3">
         <PageTitle title="コラム　-Media-" />
-        <div className="h-full lg:p-12 grid lg:grid-cols-2">
+        <div className="p-4"><p className="text-lg">このページでは当社からのお得な情報を発信しています</p></div>
+        <div className="grid h-full lg:grid-cols-2 lg:p-12">
           {parsedContents.map((content: blogContent) => (
             <MediaContent key={`media-${content.id}`} {...content} />
           ))}

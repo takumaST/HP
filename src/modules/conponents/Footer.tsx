@@ -3,19 +3,19 @@ import Image from "next/image"
 const Footer = () => {
   return (
     <>
-      <div className="py-4 lg:py-8 bg-black text-white items-center justify-between text-sm">
+      <div className="flex flex-col items-center justify-between bg-black py-4 text-sm text-white lg:py-8">
         <div className="justify-center lg:flex">
           <a href="/about">
-            <div className="w-28 flex items-center justify-center">会社概要</div>
+            <div className="flex w-28 items-center justify-center">会社概要</div>
           </a>
           <a href="/business">
-            <div className="w-28 flex items-center justify-center">事業内容</div>
+            <div className="flex w-28 items-center justify-center">事業内容</div>
           </a>
           <a href="/media">
-            <div className="w-28 flex items-center justify-center">コラム</div>
+            <div className="flex w-28 items-center justify-center">コラム</div>
           </a>
           <a href="/news">
-            <div className="w-28 flex items-center justify-center">最新情報</div>
+            <div className="flex w-28 items-center justify-center">最新情報</div>
           </a>
         </div>
         <div className="justify-center lg:flex">

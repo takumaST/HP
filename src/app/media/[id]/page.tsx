@@ -25,7 +25,7 @@ const MediaChildPage = async ({ params }: Params) => {
   return (
     <>
       <Header title="Media" />
-      <div className="min-h-screen px-12 max-w-7xl mx-auto bg-gray-200">
+      <div className="mx-auto min-h-screen max-w-7xl bg-gray-200 px-12">
         <div className="flex flex-row-reverse">
           <div className="p-2">
             <div className="text-sm">掲載日　{tokyoDate(createdAt)}</div>
@@ -34,13 +34,13 @@ const MediaChildPage = async ({ params }: Params) => {
         </div>
 
         {/* 画像 */}
-        <div className="w-full h-96">
+        <div className="h-96 w-full">
           <div className="relative size-full">
-            <Image src={eyecatch?.url ?? ""} alt="back" className="object-cover rounded-t-3xl" fill={true} />
+            <Image src={eyecatch?.url ?? ""} alt="back" className="rounded-t-3xl object-cover" fill={true} />
           </div>
         </div>
         {/* タイトル */}
-        <div className="my-4 lg:m-12 text-2xl lg:text-4xl font-bold">{title}</div>
+        <div className="my-4 text-2xl font-bold lg:m-12 lg:text-4xl">{title}</div>
 
         {/* 導入文 */}
 
@@ -49,8 +49,8 @@ const MediaChildPage = async ({ params }: Params) => {
         {/* 目次 */}
         {(toc && topicOfContents.length !== 0) && (
           <>
-            <div className="py-6 pl-16 text-2xl font-bold border-b border-zinc-400">目次</div>
-            <div className="my-2 w-4/5 lg:w-5/6 mx-auto">
+            <div className="border-b border-zinc-400 py-6 pl-16 text-2xl font-bold">目次</div>
+            <div className="mx-auto my-2 w-4/5 lg:w-5/6">
             {topicOfContents.map((content, index) => (
               <div key={`${index}${content?.id} ?? ""`} className="p-2 text-lg">
                 {content?.text}

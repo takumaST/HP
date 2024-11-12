@@ -5,6 +5,7 @@ import { client } from "../../libs/client"
 import { Content } from "@/modules/type"
 import { parseHTML, tokyoDate } from "@/modules/function"
 import Header from "@/modules/conponents/Header"
+import React from "react"
 
 const Home = async () => {
   const data = await client.get({
@@ -22,7 +23,7 @@ const Home = async () => {
   return (
     <>
       <Header />
-      <main className="flex min-h-lvh flex-col justify-between items-center px-20 py-16">
+      <main className="flex min-h-lvh flex-col items-center justify-between py-16 lg:px-20">
         <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
           <a
             href="./contact"
@@ -36,13 +37,13 @@ const Home = async () => {
         {/**
          * ロゴ
          */}
-        <div className="my-12 relative flex place-items-center justify-center w-full">
+        <div className="relative my-12 flex w-full place-items-center justify-center">
           {/* <Image
       className="absolute z-[-1] inset-0 h-full w-full object-cover dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden lg:block lg:dark:block"
       src="/images/47170035_s.webp" alt="Exsend Logo" width={180} height={37} priority
       /> */}
           <Image
-            className="absolute z-[-1] h-full w-full object-cover hidden translate-x-20 -translate-y-4 drop-shadow-[0_0_0.2rem_#000000] lg:block dark:hidden"
+            className="absolute z-[-1] hidden size-full -translate-y-4 translate-x-20 object-cover drop-shadow-[0_0_0.2rem_#000000] dark:hidden lg:block"
             src="/home.png"
             alt="Exsend Logo"
             width={180}
@@ -68,7 +69,7 @@ const Home = async () => {
         {/**
          * お知らせ
          */}
-        <div className="w-2/3 my-4">
+        <div className="my-4 w-5/6 lg:w-2/3">
           <div className="relative">
             <div className="text-6xl font-extrabold opacity-30 italic absolute">News</div>
             <div className="text-3xl font-bold m-4 pt-12">お知らせ</div>
@@ -78,9 +79,9 @@ const Home = async () => {
               const date = tokyoDate(content.revisedAt)
 
               return (
-                <>
+                <React.Fragment key={content.id}>
                   {idx < 3 ? (
-                    <div className="min-h-16" key={content.id}>
+                    <div className="min-h-16" >
                       <div className="w-full border-b border-zinc-500 hover:text-sky-800">
                         <div className="h-12 flex items-center dark:font-normal">
                           <p className="px-6 font-bold text-sky-900">{date}</p>
@@ -91,7 +92,7 @@ const Home = async () => {
                       </div>
                     </div>
                   ) : null}
-                </>
+                </React.Fragment>
               )
             })}
           </div>
@@ -100,12 +101,12 @@ const Home = async () => {
         {/**
          * company
          */}
-        <div className="w-2/3 my-4">
+        <div className="my-4 w-5/6 lg:w-2/3">
           <div className="relative">
-            <div className="text-6xl font-extrabold opacity-30 italic absolute">About</div>
-            <div className="text-3xl font-bold m-4 pt-12">会社概要</div>
+            <div className="absolute text-6xl font-extrabold italic opacity-30">About</div>
+            <div className="m-4 pt-12 text-3xl font-bold">会社概要</div>
           </div>
-          <div className="text-6xl font-extrabold">
+          <div className="m-4 pt-12 text-3xl font-bold lg:text-6xl lg:font-extrabold">
             <div className="m-8 italic">世の中に価値のあるコンテンツを広め、文化を創る。</div>
           </div>
         </div>
@@ -114,16 +115,16 @@ const Home = async () => {
          * case
          * 差し色追加
          */}
-        <div className="w-2/3 my-4">
+        <div className="my-4 w-5/6 lg:w-2/3">
           {/* <div className="absolute translate-x-1/3 z-[-1] h-full w-full bg-sky-700"></div> */}
-          <div className="w-full mx-auto">
+          <div className="mx-auto w-full">
             <div className="relative">
-              <div className="text-6xl font-extrabold opacity-30 italic absolute">Case</div>
+              <div className="absolute text-6xl font-extrabold italic opacity-30">Case</div>
               <div className="text-3xl font-bold m-4 pt-12">導入事例</div>
             </div>
           </div>
 
-          <div className="w-screen h-96 z-[-1] flex bg-sky-900 -translate-x-96">
+          <div className="z-[-1] flex h-96 w-screen -translate-x-96 bg-sky-900">
             <div className="w-4/5 mx-auto flex">
               <div className="m-8 w-1/5 bg-white flex justify-center items-center">
                 <div className="w-5/6 object-cover">
@@ -156,24 +157,25 @@ const Home = async () => {
         {/**
          * service
          */}
-        <div className="w-2/3 my-4">
+        <div className="my-4 w-5/6 lg:w-2/3">
           <div className="relative">
-            <div className="text-6xl font-extrabold opacity-30 italic absolute">Service</div>
-            <div className="text-3xl font-bold m-4 pt-12">サービス</div>
+            <div className="absolute text-6xl font-extrabold italic opacity-30">Service</div>
+            <div className="m-4 pt-12 text-3xl font-bold">サービス</div>
           </div>
           <div className="w-full">
-            <div className="flex">
-              <div className="w-1/2 text-center bg-white m-4 hover:drop-shadow-lg">
-                <div className="w-3/4 m-4 mx-auto">
-                  {/*ロゴ*/}
-                  <div className="h-48 flex justify-center items-center">
-                    <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                      <Image className="" src="/images/businessIcons/YoutubeIcon.svg" alt="" width={100} height={100} />
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              <div className="m-4 bg-white text-center hover:drop-shadow-lg">
+                {/** Youtube */}
+                <div className="m-4 mx-auto w-5/6 lg:w-3/4">
+                  {/* ロゴ */}
+                  <div className="flex h-48 items-center justify-center">
+                    <div className="m-1 flex size-40 items-center justify-center rounded-full bg-sky-500">
+                      <Image src="/images/businessIcons/YoutubeIcon.svg" alt="YouTube Icon" width={100} height={100} />
                     </div>
                   </div>
-                  {/*サービス名*/}
-                  <div className="h-24 flex justify-center items-center font-bold text-2xl">Youtube運用代行</div>
-                  {/*サービス概要*/}
+                  {/* サービス名 */}
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">Youtube運用代行</div>
+                  {/* サービス概要 */}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>
                     <p>YouTube、TikTokやInstagramといったSNS、</p>
@@ -182,17 +184,18 @@ const Home = async () => {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 text-center bg-white m-4 hover:drop-shadow-lg">
-                <div className="w-3/4 m-4 mx-auto">
-                  {/*ロゴ*/}
-                  <div className="h-48 flex justify-center items-center">
-                    <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
-                      <Image className="" src="/images/businessIcons/MovieIcon.svg" alt="" width={100} height={100} />
+
+              <div className="m-4 bg-white text-center hover:drop-shadow-lg">
+                <div className="m-4 mx-auto w-5/6 lg:w-3/4">
+                  {/* ロゴ */}
+                  <div className="flex h-48 items-center justify-center">
+                    <div className="m-1 flex size-40 items-center justify-center rounded-full bg-sky-500">
+                      <Image src="/images/businessIcons/MovieIcon.svg" alt="Movie Icon" width={100} height={100} />
                     </div>
                   </div>
-                  {/*サービス名*/}
-                  <div className="h-24 flex justify-center items-center font-bold text-2xl">動画制作/撮影</div>
-                  {/*サービス概要*/}
+                  {/* サービス名 */}
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">動画制作/撮影</div>
+                  {/* サービス概要 */}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>
                     <p>動画の撮影・撮影サポート、</p>
@@ -201,13 +204,13 @@ const Home = async () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex">
-              <div className="w-1/2 text-center bg-white m-4 hover:drop-shadow-lg">
-                <div className="w-3/4 m-4 mx-auto">
+
+            
+              <div className="m-4 bg-white text-center hover:drop-shadow-lg">
+                <div className="m-4 mx-auto w-5/6 lg:w-3/4">
                   {/*ロゴ*/}
-                  <div className="h-48 flex justify-center items-center">
-                    <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
+                  <div className="flex h-48 items-center justify-center">
+                    <div className="m-1 flex h-40 w-40 items-center justify-center rounded-full bg-sky-500">
                       <Image
                         className=""
                         src="/images/businessIcons/MarketingIcon.svg"
@@ -218,7 +221,7 @@ const Home = async () => {
                     </div>
                   </div>
                   {/*サービス名*/}
-                  <div className="h-24 flex justify-center items-center font-bold text-2xl">SNS広告運用/制作</div>
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">SNS広告運用/制作</div>
                   {/*サービス概要*/}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>
@@ -229,20 +232,20 @@ const Home = async () => {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 text-center bg-white m-4 hover:drop-shadow-lg">
-                <div className="w-3/4 m-4 mx-auto">
+              <div className="m-4 bg-white text-center hover:drop-shadow-lg">
+                <div className="m-4 mx-auto w-5/6 lg:w-3/4">
                   {/*ロゴ*/}
-                  <div className="h-48 flex justify-center items-center">
-                    <div className="rounded-full bg-sky-500 h-40 w-40 flex justify-center items-center m-1">
+                  <div className="flex h-48 items-center justify-center">
+                    <div className="m-1 flex size-40 items-center justify-center rounded-full bg-sky-500">
                       <Image className="" src="/images/businessIcons/MedicalIcon.svg" alt="" width={100} height={100} />
                     </div>
                   </div>
                   {/*サービス名*/}
-                  <div className="h-24 flex justify-center items-center font-bold text-xl">
+                  <div className="flex h-12 items-center justify-center font-bold lg:h-24 lg:text-xl">
                     美容医療SNS支援メディカルライアート
                   </div>
                   {/*サービス概要*/}
-                  <div className="h-36 text-center">
+                  <div className="h-36 text-center text-sm">
                     <p>美容医療に関わる企業様を対象に、</p>
                     <p>株式会社ライアートプロモーションと連携して、</p>
                     <p>YouTube運用や集客のサポートを行っております。</p>
@@ -286,13 +289,13 @@ const Home = async () => {
       </div>
     </div> */}
 
-        <div className="m-8 mb-32 grid lg:text-center lg:mb-0 lg:w-full lg:max-w-6xl lg:grid-cols-4">
+        <div className="m-8 mb-32 grid lg:mb-0 lg:w-full lg:max-w-6xl lg:grid-cols-4 lg:text-center">
           <a
             href="./about"
-            className="group rounded-lg border border-transparent mx-1 px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group mx-1 rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold flex">
+            <h2 className="mb-3 flex text-2xl font-semibold">
               <div>
                 About Us <div className="text-xs">会社概要</div>
               </div>
@@ -307,11 +310,11 @@ const Home = async () => {
 
           <a
             href="./business"
-            className="group rounded-lg border border-transparent mx-1 px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group mx-1 rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             // target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold flex">
+            <h2 className="mb-3 flex text-2xl font-semibold">
               <div>
                 Business <div className="text-xs">事業内容</div>
               </div>
@@ -326,11 +329,11 @@ const Home = async () => {
 
           <a
             href="./media"
-            className="group rounded-lg border border-transparent mx-1 px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group mx-1 rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             // target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold flex">
+            <h2 className="mb-3 flex text-2xl font-semibold">
               <div>
                 Media <div className="text-xs">コラム</div>
               </div>
@@ -345,11 +348,11 @@ const Home = async () => {
 
           <a
             href="./news"
-            className="group rounded-lg border border-transparent mx-1 px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group mx-1 rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-sky-600 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             // target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold flex">
+            <h2 className="mb-3 flex text-2xl font-semibold">
               <div>
                 News <div className="text-xs">最新情報</div>
               </div>

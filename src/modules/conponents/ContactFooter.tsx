@@ -3,9 +3,9 @@ import Image from "next/image"
 const ContactFooter = () => {
   return (
     <>
-      <div className="h-32 w-auto bg-black text-white flex items-center justify-center">
-        <div className="h-1/2 border border-white rounded-lg w-1/2 lg:w-1/3">
-          <a className="h-full w-full flex items-center justify-center text-center" href="/contact">
+      <div className="flex h-32 w-auto items-center justify-center bg-black text-white">
+        <div className="size-1/2 rounded-lg border border-white lg:w-1/3">
+          <a className="flex size-full items-center justify-center text-center" href="/contact">
             お問い合わせはこちら
           </a>
         </div>
