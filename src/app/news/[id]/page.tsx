@@ -1,8 +1,8 @@
 import { parseHTML } from "@/modules/function"
 import { client } from "../../../../libs/client"
 import { newsResponse } from "@/modules/apitype"
-import Header from "@/modules/conponents/Header"
-import Footer from "@/modules/conponents/Footer"
+import Header from "@/modules/conponents/organisms/Header"
+import Footer from "@/modules/conponents/organisms/Footer"
 
 interface Params {
   params: {

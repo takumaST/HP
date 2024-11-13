@@ -2,7 +2,7 @@ import { extractTOC, parseHTML, tokyoDate } from "@/modules/function"
 import Image from "next/image"
 import { client } from "../../../../libs/client"
 import { blogResponse } from "@/modules/apitype"
-import Header from "@/modules/conponents/Header"
+import Header from "@/modules/conponents/organisms/Header"
 
 interface Params {
   params: {

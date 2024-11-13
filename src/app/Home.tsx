@@ -1,10 +1,10 @@
 import ContactFooter from "@/modules/conponents/ContactFooter"
-import Footer from "@/modules/conponents/Footer"
+import Footer from "@/modules/conponents/organisms/Footer"
 import Image from "next/image"
 import { client } from "../../libs/client"
 import { Content } from "@/modules/type"
 import { parseHTML, tokyoDate } from "@/modules/function"
-import Header from "@/modules/conponents/Header"
+import Header from "@/modules/conponents/organisms/Header"
 import React from "react"
 
 const Home = async () => {
@@ -120,12 +120,12 @@ const Home = async () => {
           <div className="mx-auto w-full">
             <div className="relative">
               <div className="absolute text-6xl font-extrabold italic opacity-30">Case</div>
-              <div className="text-3xl font-bold m-4 pt-12">導入事例</div>
+              <div className="m-4 pt-12 text-3xl font-bold">導入事例</div>
             </div>
           </div>
 
           <div className="z-[-1] flex h-96 w-screen -translate-x-96 bg-sky-900">
-            <div className="w-4/5 mx-auto flex">
+            <div className="mx-auto flex w-4/5">
               <div className="m-8 w-1/5 bg-white flex justify-center items-center">
                 <div className="w-5/6 object-cover">
                   <Image src="/images/logo/footer_logo.png" alt="" width={280} height={180} />

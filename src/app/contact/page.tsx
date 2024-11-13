@@ -3,7 +3,7 @@ import ContactForm from "@/modules/conponents/ContactForm"
 import CommonHead from "@/modules/conponents/CommonHead"
 import "./page.css"
 import PageTitle from "@/modules/conponents/PageTitle"
-import Header from "@/modules/conponents/Header"
+import Header from "@/modules/conponents/organisms/Header"
 
 const TITLE = "お問い合わせ"
 const DESCRIPTION =

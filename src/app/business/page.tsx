@@ -1,5 +1,5 @@
-import Footer from "@/modules/conponents/Footer"
-import Header from "@/modules/conponents/Header"
+import Footer from "@/modules/conponents/organisms/Footer"
+import Header from "@/modules/conponents/organisms/Header"
 import Business from "./Business"
 import ContactFooter from "@/modules/conponents/ContactFooter"
 
