@@ -60,8 +60,8 @@ const Media = async () => {
 
   return (
     <>
+      <PageTitle title="コラム　-Media-" imagePath="image-media.jpg" />
       <div className="mx-auto min-h-screen w-5/6 lg:w-2/3">
-        <PageTitle title="コラム　-Media-" />
         <div className="p-4">
           <p className="text-lg">このページでは当社からのお得な情報を発信しています</p>
         </div>

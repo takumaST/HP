@@ -4,14 +4,14 @@ import Image from "next/image"
 const About = () => {
   return (
     <>
+      <PageTitle title="会社概要　-About Us-" imagePath="image-about .jpg" />
       <div className="mx-auto w-4/5">
-        <PageTitle title="会社概要　-About Us-" />
         {/* <Image src="/images/zouji_webp/画像15.webp" alt="back" width={1000} height={600}/> */}
-        <div className="p-20 hidden relative lg:block">
-          <div className="text-6xl min-h-1/2 font-bold text-center">
+        <div className="relative hidden p-20 lg:block">
+          <div className="min-h-1/2 text-center text-6xl font-bold">
             <p>EXSEND　＝　『 Exceed × End 』</p>
           </div>
-          <div className="py-8 text-3xl min-h-1/2 font-bold text-center">
+          <div className="min-h-1/2 py-8 text-center text-3xl font-bold">
             <p>限界を超え、「自分自身がやりたいこと」を全部できるようになる未来を創る</p>
           </div>
         </div>

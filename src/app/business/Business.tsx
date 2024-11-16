@@ -58,8 +58,8 @@ const BUSINESS_CONTENTS: iBusinessContents = {
 const Business = () => {
   return (
     <>
+      <PageTitle title="事業内容　-Business-" imagePath="image-business.jpg" />
       <div className="mx-auto text-center lg:w-4/5">
-        <PageTitle title="事業内容　-Business-" />
         <BusinessContents side="left" content={BUSINESS_CONTENTS["With Tube"]} />
         <BusinessContents side="right" content={BUSINESS_CONTENTS["動画制作/撮影"]} />
         <BusinessContents side="left" content={BUSINESS_CONTENTS["SNS運用代行"]} />
