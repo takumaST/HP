@@ -3,6 +3,7 @@ import Image from "next/image"
 import { client } from "../../../../libs/client"
 import { blogResponse } from "@/modules/apitype"
 import Header from "@/modules/conponents/organisms/Header"
+import Footer from "@/modules/conponents/organisms/Footer"
 
 interface Params {
   params: {
@@ -25,7 +26,7 @@ const MediaChildPage = async ({ params }: Params) => {
   return (
     <>
       <Header title="Media" />
-      <div className="mx-auto min-h-screen max-w-7xl bg-gray-200 px-12 pb-4">
+      <div className="mx-auto my-4 min-h-screen max-w-7xl bg-gray-200 px-12 py-6">
         <div className="flex flex-row-reverse">
           <div className="p-2">
             <div className="text-sm">掲載日　{tokyoDate(createdAt)}</div>
@@ -64,6 +65,7 @@ const MediaChildPage = async ({ params }: Params) => {
         {/* 本文 */}
         <div dangerouslySetInnerHTML={{ __html: parsedContent }} />
       </div>
+      <Footer />
     </>
   )
 }
