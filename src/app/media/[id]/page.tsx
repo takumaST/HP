@@ -25,7 +25,7 @@ const MediaChildPage = async ({ params }: Params) => {
   return (
     <>
       <Header title="Media" />
-      <div className="mx-auto min-h-screen max-w-7xl bg-gray-200 px-12">
+      <div className="mx-auto min-h-screen max-w-7xl bg-gray-200 px-12 pb-4">
         <div className="flex flex-row-reverse">
           <div className="p-2">
             <div className="text-sm">掲載日　{tokyoDate(createdAt)}</div>
@@ -47,15 +47,15 @@ const MediaChildPage = async ({ params }: Params) => {
         <div className="py-4" dangerouslySetInnerHTML={{ __html: parsedIntro }} />
 
         {/* 目次 */}
-        {(toc && topicOfContents.length !== 0) && (
+        {toc && topicOfContents.length !== 0 && (
           <>
             <div className="border-b border-zinc-400 py-6 pl-16 text-2xl font-bold">目次</div>
             <div className="mx-auto my-2 w-4/5 lg:w-5/6">
-            {topicOfContents.map((content, index) => (
-              <div key={`${index}${content?.id} ?? ""`} className="p-2 text-lg">
-                {content?.text}
-              </div>
-            ))}
+              {topicOfContents.map((content, index) => (
+                <div key={`${index}${content?.id} ?? ""`} className="p-2 text-lg">
+                  {content?.text}
+                </div>
+              ))}
             </div>
             <div className="border-b border-zinc-400"></div>
           </>

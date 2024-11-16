@@ -51,9 +51,9 @@ const Home = async () => {
             priority
             // /image_fx-office-1.jpg
           />
-          <div className="absolute z-[-3] inset-0 h-full w-full -translate-x-40 bg-sky-900 translate-y-8"></div>
-          <div className="relative z-[-1] min-h-96 flex place-items-center">
-            <div className="h-40 w-44 bg-white blur-lg rounded-full absolute"></div>
+          <div className="absolute inset-0 z-[-3] size-full -translate-x-40 translate-y-8 bg-sky-900"></div>
+          <div className="relative z-[-1] flex min-h-96 place-items-center">
+            <div className="absolute h-40 w-44 rounded-full bg-white blur-lg"></div>
             {/* <div className="relative z-[-1] min-h-64 flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]"> */}
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
@@ -71,8 +71,8 @@ const Home = async () => {
          */}
         <div className="my-4 w-5/6 lg:w-2/3">
           <div className="relative">
-            <div className="text-6xl font-extrabold opacity-30 italic absolute">News</div>
-            <div className="text-3xl font-bold m-4 pt-12">お知らせ</div>
+            <div className="absolute text-6xl font-extrabold italic opacity-30">News</div>
+            <div className="m-4 pt-12 text-3xl font-bold">お知らせ</div>
           </div>
           <div>
             {parsedContents.map((content: Content, idx: number) => {
@@ -81,9 +81,9 @@ const Home = async () => {
               return (
                 <React.Fragment key={content.id}>
                   {idx < 3 ? (
-                    <div className="min-h-16" >
+                    <div className="min-h-16">
                       <div className="w-full border-b border-zinc-500 hover:text-sky-800">
-                        <div className="h-12 flex items-center dark:font-normal">
+                        <div className="flex h-12 items-center dark:font-normal">
                           <p className="px-6 font-bold text-sky-900">{date}</p>
                           <a className="font-semibold" href={`/news/${content.id}`}>
                             <div>{content.title}</div>
@@ -106,8 +106,16 @@ const Home = async () => {
             <div className="absolute text-6xl font-extrabold italic opacity-30">About</div>
             <div className="m-4 pt-12 text-3xl font-bold">会社概要</div>
           </div>
-          <div className="m-4 pt-12 text-3xl font-bold lg:text-6xl lg:font-extrabold">
-            <div className="m-8 italic">世の中に価値のあるコンテンツを広め、文化を創る。</div>
+          <div className="m-4 flex flex-col items-center justify-center pt-12 text-2xl font-bold lg:text-5xl lg:font-extrabold">
+            <div className="italic text-gray-600 lg:m-8">
+              <p className="my-1 lg:ml-0">
+                世の中に<span className="text-3xl font-bold text-black lg:text-6xl">価値のある</span>
+              </p>
+              <p className="my-1 lg:ml-48">コンテンツを広め、</p>
+              <p className="my-1 lg:ml-96">
+                <span className="text-3xl font-bold text-black lg:text-6xl">文化</span>を創る。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -174,7 +182,9 @@ const Home = async () => {
                     </div>
                   </div>
                   {/* サービス名 */}
-                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">Youtube運用代行</div>
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">
+                    Youtube運用代行
+                  </div>
                   {/* サービス概要 */}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>
@@ -194,7 +204,9 @@ const Home = async () => {
                     </div>
                   </div>
                   {/* サービス名 */}
-                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">動画制作/撮影</div>
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">
+                    動画制作/撮影
+                  </div>
                   {/* サービス概要 */}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>
@@ -205,7 +217,6 @@ const Home = async () => {
                 </div>
               </div>
 
-            
               <div className="m-4 bg-white text-center hover:drop-shadow-lg">
                 <div className="m-4 mx-auto w-5/6 lg:w-3/4">
                   {/*ロゴ*/}
@@ -221,7 +232,9 @@ const Home = async () => {
                     </div>
                   </div>
                   {/*サービス名*/}
-                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">SNS広告運用/制作</div>
+                  <div className="flex h-16 items-center justify-center font-bold lg:h-24 lg:text-2xl">
+                    SNS広告運用/制作
+                  </div>
                   {/*サービス概要*/}
                   <div className="h-36 text-center">
                     <p>お客様の悩み・目的・状態に合わせて、</p>

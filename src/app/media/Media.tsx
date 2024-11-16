@@ -36,7 +36,7 @@ const MediaContent: React.FC<blogContent> = ({
             </div>
             <div className="rounded-b-xl border-x border-b border-transparent">
               <p className="px-4 pt-1 text-sm text-cyan-700 dark:text-yellow-400">{tokyoDate(createdAt)}</p>
-              <div className="px-4 py-1">{title}</div>
+              <div className="truncate px-4 py-1">{title}</div>
             </div>
           </a>
         </div>
@@ -62,7 +62,9 @@ const Media = async () => {
     <>
       <div className="mx-auto min-h-screen w-5/6 lg:w-2/3">
         <PageTitle title="コラム　-Media-" />
-        <div className="p-4"><p className="text-lg">このページでは当社からのお得な情報を発信しています</p></div>
+        <div className="p-4">
+          <p className="text-lg">このページでは当社からのお得な情報を発信しています</p>
+        </div>
         <div className="grid h-full lg:grid-cols-2 lg:p-12">
           {parsedContents.map((content: blogContent) => (
             <MediaContent key={`media-${content.id}`} {...content} />
