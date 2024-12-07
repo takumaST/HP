@@ -7,7 +7,7 @@ interface iHeaderProps {
 const Header: React.FC<iHeaderProps> = ({ title }) => {
   return (
     <>
-      <div className="fixed top-0 z-10 w-screen bg-zinc-300/50 backdrop-blur-sm dark:bg-black/50 lg:sticky">
+      <div className="fixed top-0 z-20 w-screen bg-zinc-300/50 backdrop-blur-sm dark:bg-black/50 lg:sticky">
         <div className="flex items-center justify-between p-4 lg:h-24">
           <div>
             <div className="w-56">

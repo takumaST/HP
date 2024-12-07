@@ -6,7 +6,7 @@ interface iPageTitleProps {
 
 const PageTitle: React.FC<iPageTitleProps> = ({ title, imagePath }) => {
   return (
-    <div className="relative flex h-16 w-full items-center lg:h-96">
+    <div className="relative flex h-16 w-full items-center pt-28 lg:h-96 lg:p-0">
       {/* 背景画像 */}
       {imagePath && (
         <Image

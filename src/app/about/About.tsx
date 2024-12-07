@@ -15,9 +15,9 @@ const About = () => {
             <p>限界を超え、「自分自身がやりたいこと」を全部できるようになる未来を創る</p>
           </div>
         </div>
-        <div className="px-4 lg:px-8 py-4 lg:py-16">
-          <div className="w-1/2 lg:w-1/6 lg:text-center py-4 lg:py-8 text-2xl lg:text-3xl lg:font-bold">ご挨拶</div>
-          <div className="lg:py-4 lg:px-8 text-lg lg:text-xl">
+        <div className="p-4 lg:px-8 lg:py-16">
+          <div className="w-1/2 py-4 text-2xl lg:w-1/6 lg:py-8 lg:text-center lg:text-3xl lg:font-bold">ご挨拶</div>
+          <div className="text-lg lg:px-8 lg:py-4 lg:text-xl">
             <p className="py-1 lg:py-2">合同会社エクセンドは、YouTubeやSNSを活用した動画マーケティング企業です。</p>
             <p className="py-1 lg:py-2">動画制作・YouTube運用・InstagramやTikTokなどのSNSマーケティング、</p>
             <p className="py-1 lg:py-2">SEOやMEO対策を踏まえたマーケティング支援を通して、</p>
@@ -26,7 +26,7 @@ const About = () => {
         </div>
 
         {/* mission/vision/value */}
-        <div className="p-4 lg:p-8 bg-black text-white dark:invert flex flex-col">
+        <div className="flex flex-col bg-black p-4 text-white dark:invert lg:p-8">
           {/* mission */}
           <div className="p-4 lg:p-8">
             <div className="py-4">
