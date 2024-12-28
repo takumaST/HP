@@ -44,8 +44,8 @@ const Home = async () => {
       /> */}
           <Image
             className="absolute z-[-1] hidden size-full -translate-y-4 translate-x-20 object-cover drop-shadow-[0_0_0.2rem_#000000] dark:hidden lg:block"
-            src="/home.png"
-            alt="Exsend Logo"
+            src="/images/home2.png"
+            alt="home"
             width={180}
             height={37}
             priority
@@ -53,7 +53,7 @@ const Home = async () => {
           />
           <div className="absolute inset-0 z-[-3] size-full -translate-x-40 translate-y-8 bg-sky-900"></div>
           <div className="relative z-[-1] flex min-h-96 place-items-center">
-            <div className="absolute h-40 w-44 rounded-full bg-white blur-lg"></div>
+            <div className="absolute h-48 w-44 rounded-full bg-white blur-lg"></div>
             {/* <div className="relative z-[-1] min-h-64 flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]"> */}
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
@@ -134,25 +134,25 @@ const Home = async () => {
 
           <div className="z-[-1] flex h-96 w-screen -translate-x-96 bg-sky-900">
             <div className="mx-auto flex w-4/5">
-              <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+              <div className="m-8 flex w-1/5 items-center justify-center bg-white">
                 <div className="w-5/6 object-cover">
                   <Image src="/images/logo/footer_logo.png" alt="" width={280} height={180} />
                 </div>
               </div>
 
-              <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+              <div className="m-8 flex w-1/5 items-center justify-center bg-white">
                 <div className="w-5/6 object-cover">
                   <Image src="/images/logo/LIART_logo.png" alt="" width={280} height={180} />
                 </div>
               </div>
 
-              <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+              <div className="m-8 flex w-1/5 items-center justify-center bg-white">
                 <div className="w-5/6 object-cover">
                   <Image src="/images/logo/Brave_logo.png" alt="" width={280} height={180} />
                 </div>
               </div>
 
-              <div className="m-8 w-1/5 bg-white flex justify-center items-center">
+              <div className="m-8 flex w-1/5 items-center justify-center bg-white">
                 <div className="w-5/6 object-cover">
                   <Image src="/images/logo/jibanda-01.png" alt="" width={280} height={180} />
                 </div>

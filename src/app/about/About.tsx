@@ -7,14 +7,14 @@ const About = () => {
       <PageTitle title="会社概要　-About Us-" imagePath="image-about.jpg" />
       <div className="mx-auto w-4/5">
         {/* <Image src="/images/zouji_webp/画像15.webp" alt="back" width={1000} height={600}/> */}
-        <div className="relative hidden p-20 lg:block">
-          <div className="min-h-1/2 text-center text-6xl font-bold">
+        {/* <div className="relative hidden p-20 lg:block">
+          <div className="text-center text-6xl font-bold">
             <p>EXSEND　＝　『 Exceed × End 』</p>
           </div>
-          <div className="min-h-1/2 py-8 text-center text-3xl font-bold">
+          <div className="py-8 text-center text-3xl font-bold">
             <p>限界を超え、「自分自身がやりたいこと」を全部できるようになる未来を創る</p>
           </div>
-        </div>
+        </div> */}
         <div className="p-4 lg:px-8 lg:py-16">
           <div className="w-1/2 py-4 text-2xl lg:w-1/6 lg:py-8 lg:text-center lg:text-3xl lg:font-bold">ご挨拶</div>
           <div className="text-lg lg:px-8 lg:py-4 lg:text-xl">
