@@ -23,14 +23,13 @@ const Home = async () => {
   return (
     <>
       <Header />
-      <main className="flex min-h-lvh flex-col items-center justify-between py-16 lg:px-20">
+      <main className="flex min-h-lvh flex-col items-center justify-between py-16">
         <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
           <a
             href="./contact"
             className="fixed left-0 top-0 flex w-full justify-center border-b border-sky-950 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"
           >
             お問い合わせ / Contact Us
-            {/* <code className="font-mono font-bold">src/app/page.tsx</code> */}
           </a>
         </div>
 
@@ -39,9 +38,13 @@ const Home = async () => {
          */}
         <div className="relative my-12 flex w-full place-items-center justify-center">
           {/* <Image
-      className="absolute z-[-1] inset-0 h-full w-full object-cover dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden lg:block lg:dark:block"
-      src="/images/47170035_s.webp" alt="Exsend Logo" width={180} height={37} priority
-      /> */}
+            className="absolute z-[-1] inset-0 h-full w-full object-cover dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden lg:block lg:dark:block"
+            src="/images/47170035_s.webp"
+            alt="Exsend Logo"
+            width={180}
+            height={37}
+            priority
+          /> */}
           <Image
             className="absolute z-[-1] hidden size-full -translate-y-4 translate-x-20 object-cover drop-shadow-[0_0_0.2rem_#000000] dark:hidden lg:block"
             src="/images/home2.png"

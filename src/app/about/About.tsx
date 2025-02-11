@@ -6,7 +6,6 @@ const About = () => {
     <>
       <PageTitle title="会社概要　-About Us-" imagePath="image-about.jpg" />
       <div className="mx-auto w-4/5">
-        {/* <Image src="/images/zouji_webp/画像15.webp" alt="back" width={1000} height={600}/> */}
         {/* <div className="relative hidden p-20 lg:block">
           <div className="text-center text-6xl font-bold">
             <p>EXSEND　＝　『 Exceed × End 』</p>

@@ -20,7 +20,6 @@ const NewsPage = async () => {
     <>
       <PageTitle title="最新情報　-News-" />
       <div className="mx-auto min-h-screen w-11/12 lg:w-2/3">
-        {/* <Image src={`/images/zouji_webp/画像4.webp`} alt="back" objectFit={`cover`} width={1500} height={720} /> */}
         {parsedContents.map((content: Content) => {
           const date = tokyoDate(content.revisedAt)
           return (
